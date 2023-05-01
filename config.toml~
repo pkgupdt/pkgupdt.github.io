@@ -1,0 +1,79 @@
+baseURL = '/'
+defaultContentLanguage = "ko"
+languageCode = 'ko-kr'
+title = 'pkg storage'
+
+theme = "terminal"
+
+paginate = 5
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = ""
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "orange"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  autoCover = true
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = false
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # updatedDatePrefix = "Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
+
+#  [params.twitter]
+#    creator = ""
+#	site = ""
+
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    title = "pkg storage"
+    subtitle = "A simple, retro theme for Hugo"
+    owner = ""
+    keywords = ""
+    copyright = ""
+    menuMore = "더 보기"
+    readMore = "더 읽기"
+    readOtherPosts = "다른 글 읽기"
+    missingContentMessage = "찾지 못하였습니다."
+    missingBackButtonLabel = "전페이지으로 돌아가기"
+
+    [languages.ko.params.logo]
+      logoText = "pkg storage"
+      logoHomeLink = "/"
+
+    [languages.ko.menu]
+      [[languages.ko.menu.main]]
+        identifier = "About"
+        name = "About"
+        url = "/about"
+
+      [[languages.ko.menu.main]]
+        identifier = "License"
+        name = "License"
+        url = "/license"

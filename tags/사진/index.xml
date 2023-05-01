@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>사진 on pkg storage</title>
+    <link>https://pkgupdt.github.io/tags/%EC%82%AC%EC%A7%84/</link>
+    <description>pkg storage (사진)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 21 Nov 2022 20:09:09 +0900</lastBuildDate>
+    
+    <atom:link href="https://pkgupdt.github.io/tags/%EC%82%AC%EC%A7%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>사진 테스트</title>
+      <link>https://pkgupdt.github.io/posts/%EC%82%AC%EC%A7%84-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Mon, 21 Nov 2022 20:09:09 +0900</pubDate>
+      
+      <guid>https://pkgupdt.github.io/posts/%EC%82%AC%EC%A7%84-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;a.jpg&#34; alt=&#34;첫 사진 테스트&#34;&gt;&lt;/p&gt;
+&lt;p&gt;사진 테스트입니다.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
