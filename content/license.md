@@ -1,0 +1,29 @@
+---
+title: "License"
+date: 2022-11-21T00:55:09+09:00
+draft: false
+---
+
+### 텍스트 내용의 경우
+
+이 블로그 운영자가 쓴 내용은 퍼블릭 도메인에 따릅니다. 자유롭게 이용하실 수 있습니다.
+
+인용문 등 외부 자료는 해당 자료 저작권자의 정책에 따릅니다.
+
+### For the Text Contents
+
+The text contents in this blog, except the contents of other copyright holders, are released into the public domain. 
+
+### 그외 내용의 경우
+
+이 블로그 운영자에게 저작권이 있는 텍스트 외의 컨텐츠에 대해서는 [저작자표시-비영리 4.0 국제 (CC BY-NC 4.0) 라이센스](https://creativecommons.org/licenses/by-nc/4.0/)에 따릅니다.
+
+외부 자료는 해당 자료 저작권자의 정책에 따릅니다.
+
+### For the Non-Text Contents
+
+The non-text format contents (e.g. pictures) in this blog, except the contents of other copyright holders, are released under the CC BY-NC 4.0.
+
+### 제한 책임
+
+이 블로그에 게재된 내용들은 운영자의 개인적 의견이며, 운영자는 추측이 사실과 동일할 것과 예측이 실현될 것임을 보증하지 않습니다. 다만 사용기 등 평가 영역에서 해당 포스팅에 별도로 언급이 없는 한 금전 등의 이익을 대가로 작성하지 않았음을 확인합니다.
