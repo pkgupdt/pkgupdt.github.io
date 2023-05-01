@@ -17,6 +17,10 @@
 유닉스 머신이긴 해요? 넵. 유닉스 머신입니다…만, 터미널 환경에서만 그렇다고 생각하면 됩니다. 터미널에서는 tcsh 대신 ksh 쓰는 FreeBSD 느낌으로 대하면, 애플 제공 &#43; homebrew 하면 있을?">
 
 
+    <meta name="keywords" content=",">
+
+
+
 
 <link rel="icon" type="image/x-icon" href="https://pkgupdt.github.io/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://pkgupdt.github.io/favicon.png">
@@ -53,7 +57,7 @@
     
 
     
-        <link rel="stylesheet" href="https://pkgupdt.github.io/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css" integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
+        <link rel="stylesheet" href="https://pkgupdt.github.io/css/style.min.498349ff6e7919343de1acfbcd45cfd0c7f847781d60c671960a5c0adec35e48.css" integrity="sha256-SYNJ/255GTQ94az7zUXP0Mf4R3gdYMZxlgpcCt7DXkg=">
     
 
 
@@ -109,6 +113,8 @@
 
 
 
+
+
     
 </head>
 <body>
@@ -139,6 +145,8 @@
         <a class="" href="https://pkgupdt.github.io/posts" title="">글 목록</a>
         
     </nav>
+
+
 
 
 
@@ -242,31 +250,32 @@
 
     <div class="post-taxonomies">
         
-            
-                <ul class="post-tags">
+        
+            <ul class="post-tags">
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/%EB%A7%A5/">#맥</a></li>
+                    <li><a href="https://pkgupdt.github.io/tags/%EB%A7%A5/">#맥</a></li>
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/%EB%AF%B8%EB%8B%88/">#미니</a></li>
+                    <li><a href="https://pkgupdt.github.io/tags/%EB%AF%B8%EB%8B%88/">#미니</a></li>
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/%EA%B0%80%EC%84%B1%EB%B9%84/">#가성비</a></li>
+                    <li><a href="https://pkgupdt.github.io/tags/%EA%B0%80%EC%84%B1%EB%B9%84/">#가성비</a></li>
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/%EC%82%AC%EC%9A%A9%EA%B8%B0/">#사용기</a></li>
+                    <li><a href="https://pkgupdt.github.io/tags/%EC%82%AC%EC%9A%A9%EA%B8%B0/">#사용기</a></li>
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/%EC%84%B1%EB%8A%A5/">#성능</a></li>
+                    <li><a href="https://pkgupdt.github.io/tags/%EC%84%B1%EB%8A%A5/">#성능</a></li>
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/%EC%9C%A0%EB%8B%89%EC%8A%A4/">#유닉스</a></li>
+                    <li><a href="https://pkgupdt.github.io/tags/%EC%9C%A0%EB%8B%89%EC%8A%A4/">#유닉스</a></li>
+                
                     
-                        
-                        <li><a href="https://pkgupdt.github.io/tags/m1/">#m1</a></li>
-                    
-                </ul>
+                    <li><a href="https://pkgupdt.github.io/tags/m1/">#m1</a></li>
+                
+            </ul>
+        
         
     </div>
 </div>
@@ -294,11 +303,15 @@
     
 
     
+        
+
+
+
+
+
+
 
     
-
-    
-
 
         </main>
         
@@ -360,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function detectCurrentScheme() {
-    if (localStorage.getItem(STORAGE_KEY)) {
+    if (localStorage !== null && localStorage.getItem(STORAGE_KEY)) {
         return localStorage.getItem(STORAGE_KEY)
     } 
     if (defaultTheme) {
@@ -375,7 +388,7 @@ function detectCurrentScheme() {
     return 'light'
 }
 
-function changeButtonText(switchButton)
+function changeButtonText()
 {   
     if (switchButton) {
         switchButton.textContent = currentTheme == 'dark' ?  "" : ""
@@ -384,11 +397,13 @@ function changeButtonText(switchButton)
 
 function switchTheme(e) {
     if (currentTheme == 'dark') {
-        localStorage.setItem(STORAGE_KEY, 'light')
+        if (localStorage !== null)
+            localStorage.setItem(STORAGE_KEY, 'light')
         document.documentElement.setAttribute('data-theme', 'light')
         currentTheme = 'light'
     } else {
-        localStorage.setItem(STORAGE_KEY, 'dark')
+        if (localStorage !== null)
+            localStorage.setItem(STORAGE_KEY, 'dark')
         document.documentElement.setAttribute('data-theme', 'dark')
         currentTheme = 'dark'
     }

@@ -20,6 +20,8 @@ For the Text Contents The text contents in this blog, except the contents of oth
 
 
 
+
+
 <link rel="icon" type="image/x-icon" href="https://pkgupdt.github.io/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://pkgupdt.github.io/favicon.png">
 
@@ -55,7 +57,7 @@ For the Text Contents The text contents in this blog, except the contents of oth
     
 
     
-        <link rel="stylesheet" href="https://pkgupdt.github.io/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css" integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
+        <link rel="stylesheet" href="https://pkgupdt.github.io/css/style.min.498349ff6e7919343de1acfbcd45cfd0c7f847781d60c671960a5c0adec35e48.css" integrity="sha256-SYNJ/255GTQ94az7zUXP0Mf4R3gdYMZxlgpcCt7DXkg=">
     
 
 
@@ -115,6 +117,8 @@ For the Text Contents The text contents in this blog, except the contents of oth
 
 
 
+
+
     
 </head>
 <body>
@@ -145,6 +149,8 @@ For the Text Contents The text contents in this blog, except the contents of oth
         <a class="" href="https://pkgupdt.github.io/posts" title="">글 목록</a>
         
     </nav>
+
+
 
 
 
@@ -219,7 +225,8 @@ For the Text Contents The text contents in this blog, except the contents of oth
 
     <div class="post-taxonomies">
         
-            
+        
+        
     </div>
 </div>
 
@@ -230,11 +237,15 @@ For the Text Contents The text contents in this blog, except the contents of oth
     
 
     
+        
+
+
+
+
+
+
 
     
-
-    
-
 
         </main>
         
@@ -296,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function detectCurrentScheme() {
-    if (localStorage.getItem(STORAGE_KEY)) {
+    if (localStorage !== null && localStorage.getItem(STORAGE_KEY)) {
         return localStorage.getItem(STORAGE_KEY)
     } 
     if (defaultTheme) {
@@ -311,7 +322,7 @@ function detectCurrentScheme() {
     return 'light'
 }
 
-function changeButtonText(switchButton)
+function changeButtonText()
 {   
     if (switchButton) {
         switchButton.textContent = currentTheme == 'dark' ?  "" : ""
@@ -320,11 +331,13 @@ function changeButtonText(switchButton)
 
 function switchTheme(e) {
     if (currentTheme == 'dark') {
-        localStorage.setItem(STORAGE_KEY, 'light')
+        if (localStorage !== null)
+            localStorage.setItem(STORAGE_KEY, 'light')
         document.documentElement.setAttribute('data-theme', 'light')
         currentTheme = 'light'
     } else {
-        localStorage.setItem(STORAGE_KEY, 'dark')
+        if (localStorage !== null)
+            localStorage.setItem(STORAGE_KEY, 'dark')
         document.documentElement.setAttribute('data-theme', 'dark')
         currentTheme = 'dark'
     }
