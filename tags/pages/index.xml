@@ -6,17 +6,17 @@
     <description>pkg storage (pages)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 23 Nov 2022 00:07:43 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 01 May 2023 22:22:18 +0900</lastBuildDate>
     
     <atom:link href="https://pkgupdt.github.io/tags/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Github에 올리기</title>
-      <link>https://pkgupdt.github.io/posts/github/</link>
-      <pubDate>Wed, 23 Nov 2022 00:07:43 +0900</pubDate>
+      <link>https://pkgupdt.github.io/posts/github-error/</link>
+      <pubDate>Mon, 01 May 2023 22:22:18 +0900</pubDate>
       
-      <guid>https://pkgupdt.github.io/posts/github/</guid>
+      <guid>https://pkgupdt.github.io/posts/github-error/</guid>
       <description>&lt;h2 id=&#34;github에-올리기&#34; &gt;github에 올리기
 &lt;span&gt;
     &lt;a href=&#34;#github%ec%97%90-%ec%98%ac%eb%a6%ac%ea%b8%b0&#34;&gt;
