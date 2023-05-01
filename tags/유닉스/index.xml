@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>유닉스 on pkg storage</title>
+    <title>유닉스 on pkgupdt의 글 창고</title>
     <link>https://pkgupdt.github.io/tags/%EC%9C%A0%EB%8B%89%EC%8A%A4/</link>
-    <description>pkg storage (유닉스)</description>
+    <description>pkgupdt의 글 창고 (유닉스)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 21 Nov 2022 19:47:20 +0900</lastBuildDate>

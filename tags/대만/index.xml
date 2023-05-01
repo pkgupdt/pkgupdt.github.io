@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>대만 on pkg storage</title>
+    <title>대만 on pkgupdt의 글 창고</title>
     <link>https://pkgupdt.github.io/tags/%EB%8C%80%EB%A7%8C/</link>
-    <description>pkg storage (대만)</description>
+    <description>pkgupdt의 글 창고 (대만)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 21 Nov 2022 20:09:09 +0900</lastBuildDate>

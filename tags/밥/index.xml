@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>밥 on pkg storage</title>
+    <title>밥 on pkgupdt의 글 창고</title>
     <link>https://pkgupdt.github.io/tags/%EB%B0%A5/</link>
-    <description>pkg storage (밥)</description>
+    <description>pkgupdt의 글 창고 (밥)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 01 May 2023 22:22:09 +0900</lastBuildDate>

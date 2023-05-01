@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>m1 on pkg storage</title>
+    <title>m1 on pkgupdt의 글 창고</title>
     <link>https://pkgupdt.github.io/tags/m1/</link>
-    <description>pkg storage (m1)</description>
+    <description>pkgupdt의 글 창고 (m1)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 21 Nov 2022 19:47:20 +0900</lastBuildDate>
