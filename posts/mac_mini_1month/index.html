@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+
+<html lang="ko-kr" data-theme="">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>맥 미니 m1 깡통 두달반 사용기 - pkg storage</title>
+
+<meta name="description" content="8월말에 m1 맥 미니 기본 모델 (8GB/256GB)를 샀으니 이제 한 두 달 반 정도 됐습니다. 업무용 등으로 맥을 써 본 경험은 있었지만 개인용 시스템으로 풀타임? 사용한 적은 이번이 처음이라 비슷한 고민이 분들에게 참고가 될까하여 정리해봅니다.
+왜 샀어요? RISC UNIX Workstation을 써 보고 싶었기 때문이죠. 다른 말로는 MS 오피스 돌아가는 유닉스 머신!
+유닉스 머신이긴 해요? 넵. 유닉스 머신입니다…만, 터미널 환경에서만 그렇다고 생각하면 됩니다. 터미널에서는 tcsh 대신 ksh 쓰는 FreeBSD 느낌으로 대하면, 애플 제공 &#43; homebrew 하면 있을?">
+
+
+
+<link rel="icon" type="image/x-icon" href="https://pkgupdt.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://pkgupdt.github.io/favicon.png">
+
+
+<style>
+  body {
+    visibility: hidden;
+    opacity: 0;
+  }
+</style>
+
+<noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+    
+    
+
+    
+        <link rel="stylesheet" href="https://pkgupdt.github.io/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css" integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
+    
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+    
+    
+        
+    
+    
+
+    
+        <script src="https://pkgupdt.github.io/js/script.min.74bf1a3fcf1af396efa4acf3e660e876b61a2153ab9cbe1893ac24ea6d4f94ee.js" type="text/javascript" charset="utf-8" integrity="sha256-dL8aP88a85bvpKzz5mDodrYaIVOrnL4Yk6wk6m1PlO4="></script>
+    
+
+
+
+
+
+
+
+<meta property="og:title" content="맥 미니 m1 깡통 두달반 사용기" />
+<meta property="og:description" content="8월말에 m1 맥 미니 기본 모델 (8GB/256GB)를 샀으니 이제 한 두 달 반 정도 됐습니다. 업무용 등으로 맥을 써 본 경험은 있었지만 개인용 시스템으로 풀타임? 사용한 적은 이번이 처음이라 비슷한 고민이 분들에게 참고가 될까하여 정리해봅니다.
+왜 샀어요? RISC UNIX Workstation을 써 보고 싶었기 때문이죠. 다른 말로는 MS 오피스 돌아가는 유닉스 머신!
+유닉스 머신이긴 해요? 넵. 유닉스 머신입니다…만, 터미널 환경에서만 그렇다고 생각하면 됩니다. 터미널에서는 tcsh 대신 ksh 쓰는 FreeBSD 느낌으로 대하면, 애플 제공 &#43; homebrew 하면 있을?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pkgupdt.github.io/posts/mac_mini_1month/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-21T19:47:20+09:00" />
+<meta property="article:modified_time" content="2022-11-21T19:47:20+09:00" /><meta property="og:site_name" content="pkg storage" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="맥 미니 m1 깡통 두달반 사용기"/>
+<meta name="twitter:description" content="8월말에 m1 맥 미니 기본 모델 (8GB/256GB)를 샀으니 이제 한 두 달 반 정도 됐습니다. 업무용 등으로 맥을 써 본 경험은 있었지만 개인용 시스템으로 풀타임? 사용한 적은 이번이 처음이라 비슷한 고민이 분들에게 참고가 될까하여 정리해봅니다.
+왜 샀어요? RISC UNIX Workstation을 써 보고 싶었기 때문이죠. 다른 말로는 MS 오피스 돌아가는 유닉스 머신!
+유닉스 머신이긴 해요? 넵. 유닉스 머신입니다…만, 터미널 환경에서만 그렇다고 생각하면 됩니다. 터미널에서는 tcsh 대신 ksh 쓰는 FreeBSD 느낌으로 대하면, 애플 제공 &#43; homebrew 하면 있을?"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main"></a>
+    <div class="container">
+        <header class="common-header"> 
+            
+                <div class="header-top">
+    <h1 class="site-title">
+    <a href="/">pkg storage</a>
+</h1>
+    <ul class="social-icons">
+
+
+
+
+
+</ul>
+</div>
+
+    <nav>
+        
+        
+        <a class="" href="https://pkgupdt.github.io/about" title="">About</a>
+        
+        <a class="" href="https://pkgupdt.github.io/license" title="">License</a>
+        
+        <a class="" href="https://pkgupdt.github.io/posts" title="">글 목록</a>
+        
+    </nav>
+
+
+
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+    
+
+    <article class="post h-entry">
+        <div class="post-header">
+            <header>
+                <h1 class="p-name post-title">맥 미니 m1 깡통 두달반 사용기</h1>
+
+                
+            </header>
+        </div>
+        <div class="content e-content">
+            <p>8월말에 m1 맥 미니 기본 모델 (8GB/256GB)를 샀으니 이제 한 두 달 반 정도 됐습니다. 업무용 등으로 맥을 써 본 경험은 있었지만 개인용 시스템으로 풀타임? 사용한 적은 이번이 처음이라 비슷한 고민이 분들에게 참고가 될까하여 정리해봅니다.</p>
+<h2 id="왜-샀어요" >왜 샀어요?
+<span>
+    <a href="#%ec%99%9c-%ec%83%80%ec%96%b4%ec%9a%94">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>RISC UNIX Workstation을 써 보고 싶었기 때문이죠. 다른 말로는 MS 오피스 돌아가는 유닉스 머신!</p>
+<h2 id="유닉스-머신이긴-해요" >유닉스 머신이긴 해요?
+<span>
+    <a href="#%ec%9c%a0%eb%8b%89%ec%8a%a4-%eb%a8%b8%ec%8b%a0%ec%9d%b4%ea%b8%b4-%ed%95%b4%ec%9a%94">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>넵. 유닉스 머신입니다…만, 터미널 환경에서만 그렇다고 생각하면 됩니다. 터미널에서는 tcsh 대신 ksh 쓰는 FreeBSD 느낌으로 대하면, 애플 제공 + homebrew 하면 있을? 툴들은 다 있습니다.</p>
+<p>X 환경은 제 예측보다는 훨씬 더 지원이 미비합니다. Qt는 아예 네이티브처럼 돌아가서 X 앱이 아니게 되고, Gtk+는 앱과 라이브러리 버전마다 지원 정도가 널뜁니다. 다행이라면 PIL 같은 파이썬 환경은 네이티브 부럽지 않게 잘 돌아간다 정도?</p>
+<p>GUI를 위해서 코코아 앱과 혼용을 시작하면, 이때부터는 맥 환경의 특성들 – 특히, 앱과 윈도의 분리! – 를 이해해야 합니다. 뭐, 유닉스도 별의별 독특한 놈들이 있으니 그렇구나 하고 배우면 되지만, 생각하던 것처럼 바로 잘 되지는 않습니다.</p>
+<p>유닉스는 유닉스인데, X 윈도를 얹은 유닉스는 아니에요. 거의 처음부터 삽질을 좀 해 봐야 합니다. 업무용?으로 빌려서 네이티브 앱들만 돌릴 때는 괜찮았는데, 개인적으로 쓰던 툴들을 올리려다 삽질을 거하게 하고 지금은 반 포기…</p>
+<p>WSL2가 안정화되고 있는 윈도 대비 장점이라면, 그래도 정통? 유닉스 시스템을 제공하고, 가상화가 아닌만큼 자원을 덜 먹고 메모리, 디스크 접근에 있어서 유리하다는 점 정도가 있겠네요.</p>
+<p>하지만 어차피 취미 정도 개발용으로 사용한다면, 더이상 맥의 유닉스 기반은 절대적 우위가 아닙니다. WSL2 잘 돌아요. MS 오피스가 필수가 아니면 리눅스를 바로 쓰면 되죠. 😉</p>
+<h2 id="맥-앱들은-쓸만해요" >맥 앱들은 쓸만해요?
+<span>
+    <a href="#%eb%a7%a5-%ec%95%b1%eb%93%a4%ec%9d%80-%ec%93%b8%eb%a7%8c%ed%95%b4%ec%9a%94">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>아니오. 99%의 사람들에게, 소프트웨어만 비교하면 윈도가 낫습니다. 하다못해 Visual Studio Code를 굴리는데 어디가 더 유리할지는 뻔하죠? ㅎㅎ</p>
+<p>VLC, emacs, Vivaldi 처럼 맥용 버전이 더 나은 경우도 있지만, 이미 대부분의 경우에 맥용 앱들의 품질은 윈도용보다 낫지 않습니다.</p>
+<p>한컴 한글 정도쯤 되면 이제 돌기는 돕니다, 수준이고… MS 오피스도 365로 최신 버전 깔아도 미세하게 깨집니다. 특히 이미지 복붙하면 크기 조정에 실패하는 게 조직 문서에서는 개짜증이…</p>
+<p>다만 기본 제공 폰트와 폰트 렌더링 품질은 더 낫습니다. 저는 어차피 Noto Sans CJK 사용중이라 큰 차이는 없지만.</p>
+<p>Emacs와 유닉스 터미널 사용에 익숙해서 이걸로 일을 처리하려고 하는, 저 같은 올드 스쿨 개발자 출신 아니라면 맥이 윈도보다 소프트웨어 품질 면에서 더 높다고는 생각지 않습니다. 물론 평균은 맥이 더 높을 수도 있지만, 최소한 제가 쓰는 영역에서는 윈도쪽에 더 나은 소프트웨어가 항상 더 있다고 말할 수 있겠네요. iMovie나 Garage Band는 안 써봐서 그쪽은 모르겠고요.</p>
+<h2 id="아니-그럼-왜-샀으여" >아니 그럼 왜 샀으여?;;
+<span>
+    <a href="#%ec%95%84%eb%8b%88-%ea%b7%b8%eb%9f%bc-%ec%99%9c-%ec%83%80%ec%9c%bc%ec%97%ac">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>m1이… 78만원짜리 본체 중에서 성능이 제일 좋습니다. 싱글 스레드 성능이 좋은데다 램 대역폭이 높아서, 이미지 처리 같은 메모리 인텐시브한 작업에는 미친 가성비를 보여줍니다. 라이트룸이나 브리지에서 사진 처리 걸어보면 뜨는 속도에 입이 쩍… 이거 80만도 안 하는 건데.;;</p>
+<p>네, 싸고 빨라서 씁니다. 메모리 요구가 낮아서 8GB로도 별 문제 없이 잘 돌아주는 것도 좋고요.</p>
+<p>한마디로, 애플이나 어도비의 이미지-영상 처리에는 하이엔드급 안 갈 거면 비슷한 가격대에 적수가 없습니다. AP 자체의 성능도 좋지만, CPU-GPU가 고정이라 최적화가 무척 잘 되어 있다는 느낌.</p>
+<p>다만 코어수는 부족하니까, 어디까지나 맥 미니는 개인 취미용에 그칩니다. 이 이상 넘어가려면 결국 스튜디오를 가야 할텐데 가격이…</p>
+<h2 id="누구한테-추천해요" >누구한테 추천해요?
+<span>
+    <a href="#%eb%88%84%ea%b5%ac%ed%95%9c%ed%85%8c-%ec%b6%94%ec%b2%9c%ed%95%b4%ec%9a%94">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>게임 안 하는 취미 사진가, 영상편집자. 가성비 쩝니다.</p>
+<p>유닉스 개발자 출신도 성능은 괜찮으니 사 보는 것도 나쁘지 않습니다. Emacs, Vim도 네이티브 잘 돌고 다른 툴들도 다 포팅 잘 되어 있어요.</p>
+<p>리눅스를 다루려면 윈도의 WSL2 아니면 네이티브 설치를 추천. 굳이 맥 살 필요는 없습니다. 특히 리눅스 하는데 x64가 아닌 Arm을 산다? 그냥 스타벅스 입장? 하고 싶다고 하세요. ㅎㅎㅎ;</p>
+<h2 id="누구한테-비추해요" >누구한테 비추해요?
+<span>
+    <a href="#%eb%88%84%ea%b5%ac%ed%95%9c%ed%85%8c-%eb%b9%84%ec%b6%94%ed%95%b4%ec%9a%94">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>공공 관련 일하시는 분들은 전부 비추합니다. 한컴 한글이… 볼 수는 있습니다. 볼 수는. 요즘 맥도 잘 지원한다고? 공공 사이트만 가면 여전히 블록됩니다. 저도 아직도 옛 윈도 울트라북 안 팔고 가지고 있습니다. 급할 때를 위해서.</p>
+<p>게임 하시는 분들은 뭐, 잘 아시겠지만 맥에는 게임 없습니다.</p>
+<h2 id="정리" >정리
+<span>
+    <a href="#%ec%a0%95%eb%a6%ac">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>아니 뭐, 쓸만합니다. 가격대비성능 특히 이미지 영상 성능이 놀라울 정도로 좋습니다. 유닉스 하던 가락? 살리기도 좋고 편하고.</p>
+<p>하지만 그거만 보고 윈도에서 건너오려면 나름대로 고생할 각오는 하고 오시고, 한컴 한글 자주 쓴다면 절대 오지 마세요. 들리는 말로는 신버전 나온 것도 버그 쩐다고… ㅎㅎㅎ</p>
+
+        </div>
+        
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">2022. 11. 21.</div>
+    
+
+    <a class="post-hidden-url u-url" href="https://pkgupdt.github.io/posts/mac_mini_1month/">https://pkgupdt.github.io/posts/mac_mini_1month/</a>
+    <a href="https://pkgupdt.github.io" class="p-name p-author post-hidden-author h-card" rel="me">pkgupdt</a>
+
+
+    <div class="post-taxonomies">
+        
+            
+                <ul class="post-tags">
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/%EB%A7%A5/">#맥</a></li>
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/%EB%AF%B8%EB%8B%88/">#미니</a></li>
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/%EA%B0%80%EC%84%B1%EB%B9%84/">#가성비</a></li>
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/%EC%82%AC%EC%9A%A9%EA%B8%B0/">#사용기</a></li>
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/%EC%84%B1%EB%8A%A5/">#성능</a></li>
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/%EC%9C%A0%EB%8B%89%EC%8A%A4/">#유닉스</a></li>
+                    
+                        
+                        <li><a href="https://pkgupdt.github.io/tags/m1/">#m1</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+
+    
+
+    
+        
+    <div class="pagination post-pagination">
+        <div class="left pagination-item ">
+            
+                <a href="/posts/%EC%82%AC%EC%A7%84-%ED%85%8C%EC%8A%A4%ED%8A%B8/">사진 테스트</a>
+            
+        </div>
+        <div class="right pagination-item disabled">
+            
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+        </main>
+        
+            <footer class="common-footer">
+    
+    
+
+    <div class="common-footer-bottom">
+        
+        <div class="copyright">
+            <p>© pkgupdt, 2023<br>
+             <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>,  <a target="_blank" rel="noopener noreferrer" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.<br>
+            
+            </p>  
+        </div> 
+
+        
+
+    
+
+
+
+    <button class="theme-switcher">
+        
+    </button>
+
+
+<script>
+const STORAGE_KEY = 'user-color-scheme'
+const defaultTheme = "auto"
+
+let currentTheme
+let switchButton
+let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+const autoChangeScheme = e => {
+    currentTheme = e.matches ? 'dark' : 'light'
+    document.documentElement.setAttribute('data-theme', currentTheme)
+    changeButtonText()
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    switchButton = document.querySelector('.theme-switcher')
+    currentTheme = detectCurrentScheme()
+    if (currentTheme == 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark')
+    }
+    if (currentTheme == 'auto') {
+        autoChangeScheme(autoDefinedScheme);
+        autoDefinedScheme.addListener(autoChangeScheme);
+    }
+
+    if (switchButton) {
+        changeButtonText()
+        switchButton.addEventListener('click', switchTheme, false)
+    }
+  
+    showContent()
+})
+
+function detectCurrentScheme() {
+    if (localStorage.getItem(STORAGE_KEY)) {
+        return localStorage.getItem(STORAGE_KEY)
+    } 
+    if (defaultTheme) {
+        return defaultTheme
+    } 
+    if (!window.matchMedia) {
+        return 'light'
+    } 
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark'
+    }
+    return 'light'
+}
+
+function changeButtonText(switchButton)
+{   
+    if (switchButton) {
+        switchButton.textContent = currentTheme == 'dark' ?  "" : ""
+    }
+}
+
+function switchTheme(e) {
+    if (currentTheme == 'dark') {
+        localStorage.setItem(STORAGE_KEY, 'light')
+        document.documentElement.setAttribute('data-theme', 'light')
+        currentTheme = 'light'
+    } else {
+        localStorage.setItem(STORAGE_KEY, 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark')
+        currentTheme = 'dark'
+    }
+    changeButtonText()
+}
+
+function showContent() {
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = 1;
+}
+</script>   
+    </div>
+
+    <p class="h-card vcard">
+
+    <a href=https://pkgupdt.github.io class="p-name u-url url fn" rel="me">pkgupdt</a> 
+
+    
+
+    
+</p> 
+</footer>
+
+        
+    </div>
+</body>
+</html>
