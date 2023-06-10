@@ -5,6 +5,7 @@
     <link>https://pkgupdt.github.io/categories/</link>
     <description>Recent content in Categories on pkgupdt의 글 창고</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language><atom:link href="https://pkgupdt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko</language>
+    <copyright>pkgupdt</copyright><atom:link href="https://pkgupdt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
