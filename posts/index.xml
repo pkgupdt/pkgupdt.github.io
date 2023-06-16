@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <copyright>[pkgupdt](mailto:qamll2jmh@mozmail.com)</copyright>
-    <lastBuildDate>Fri, 12 May 2023 22:47:03 +0900</lastBuildDate><atom:link href="https://pkgupdt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jun 2023 19:02:42 +0900</lastBuildDate><atom:link href="https://pkgupdt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>테스트</title>
+      <link>https://pkgupdt.github.io/posts/%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Fri, 16 Jun 2023 19:02:42 +0900</pubDate>
+      
+      <guid>https://pkgupdt.github.io/posts/%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <description>한글 파일명 테스트입니다. ㅎㅎㅎ</description>
+    </item>
+    
+    <item>
+      <title>Toyokoinn</title>
+      <link>https://pkgupdt.github.io/posts/toyokoinn/</link>
+      <pubDate>Sun, 11 Jun 2023 21:26:08 +0900</pubDate>
+      
+      <guid>https://pkgupdt.github.io/posts/toyokoinn/</guid>
+      <description>토요코인 호텔의 최대 장점은 당일 직전까지 무료로 취소 가능하다는 점, 그리고 조식이 기본 제공 된다는 점이다.:wq</description>
+    </item>
+    
     <item>
       <title>세가지 라이프 스타일</title>
       <link>https://pkgupdt.github.io/posts/3lifestyle/</link>
